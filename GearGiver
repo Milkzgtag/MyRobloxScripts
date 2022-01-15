@@ -1,0 +1,171 @@
+--GearGiver gui by shibaaka
+
+-- Instances:
+
+local gearguilol = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Example = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local TextButton = Instance.new("TextButton")
+local Exit = Instance.new("TextButton")
+local Gear = Instance.new("Folder")
+local Super = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+
+--Properties:
+
+gearguilol.Name = "gearguilol"
+gearguilol.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+gearguilol.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+gearguilol.ResetOnSpawn = false
+
+Frame.Parent = gearguilol
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.34712413, 0, 0.245087489, 0)
+Frame.Size = UDim2.new(0.303834528, 0, 0.508758664, 0)
+
+Example.Name = "Example"
+Example.Parent = game.StarterGui.gearguilol.Frame.Script
+Example.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Example.Size = UDim2.new(0, 200, 0, 50)
+Example.Font = Enum.Font.SourceSans
+Example.TextColor3 = Color3.fromRGB(0, 0, 0)
+Example.TextScaled = true
+Example.TextSize = 14.000
+Example.TextWrapped = true
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.Position = UDim2.new(0.142809689, 0, 0.16434519, 0)
+TextBox.Size = UDim2.new(0.717735291, 0, 0.162451178, 0)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Gear Id"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.142809689, 0, 0.447018921, 0)
+TextButton.Size = UDim2.new(0.740983367, 0, 0.195320219, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Get"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+Exit.Name = "Exit"
+Exit.Parent = Frame
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.Position = UDim2.new(0.883793116, 0, 0, 0)
+Exit.Size = UDim2.new(0.112919278, 0, 0.116434522, 0)
+Exit.Font = Enum.Font.SourceSans
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextWrapped = true
+
+Gear.Name = "Gear"
+Gear.Parent = Frame
+
+Super.Name = "Super"
+Super.Parent = Frame
+Super.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Super.Position = UDim2.new(0.142809689, 0, 0.713258147, 0)
+Super.Size = UDim2.new(0.740983367, 0, 0.195320219, 0)
+Super.Font = Enum.Font.SourceSans
+Super.Text = "Super Rocket Launcher"
+Super.TextColor3 = Color3.fromRGB(0, 0, 0)
+Super.TextScaled = true
+Super.TextSize = 14.000
+Super.TextWrapped = true
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(-0.430255741, 0, 0, 0)
+ScrollingFrame.Size = UDim2.new(0.430203885, 0, 0.999999881, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 4, 0)
+ScrollingFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+UIGridLayout.Parent = ScrollingFrame
+UIGridLayout.FillDirection = Enum.FillDirection.Vertical
+UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellPadding = UDim2.new(0, 0, 0.00999999978, 0)
+UIGridLayout.CellSize = UDim2.new(0.75, 0, 0.075000003, 0)
+
+-- Scripts:
+
+local function OWDIJI_fake_script() -- Frame.Drag 
+	local script = Instance.new('LocalScript', Frame)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(OWDIJI_fake_script)()
+local function JKVJOS_fake_script() -- Frame.Script 
+	local script = Instance.new('Script', Frame)
+
+	local player = script:FindFirstAncestorOfClass("Player")
+	local frame = script.Parent
+	local Remote = script.Parent.GearIdRemote
+	local scrollingframe = script.Parent.ScrollingFrame
+	local gears = script.Parent.Gear
+	
+	for i, v in pairs(gears:GetChildren()) do
+		if v and v:IsA("Tool") then
+			local example = script.Example:Clone()
+			example.Name = v.Name
+			example.Text = v.Name
+			example.Gear.Value = v.Name
+			example.MouseButton1Down:Connect(function()
+				if player then
+					local gear = gears:FindFirstChild(example.Gear.Value)
+					if gear then
+						local gearclone = gear:Clone()
+						gearclone.Parent = player.Backpack
+					end
+				end
+			end)
+			example.Parent = scrollingframe
+		end
+	end
+	
+	Remote.OnServerEvent:Connect(function(Client, Id)
+		if player == Client then
+			if tonumber(Id) then
+				game:GetService("InsertService"):LoadAsset(tonumber(Id)):GetChildren()[1].Parent=player.Backpack
+			end
+		end
+	end)
+	
+	script.Parent.Super.MouseButton1Down:Connect(function()
+		script.Parent.Gear.ModernRocketLauncher:Clone().Parent = player.Backpack
+	end)
+end
+coroutine.wrap(JKVJOS_fake_script)()
+local function PUOMZO_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local Remote = script.Parent.GearIdRemote
+	script.Parent.TextButton.MouseButton1Down:Connect(function()
+		Remote:FireServer(script.Parent.TextBox.Text)
+	end)
+end
+coroutine.wrap(PUOMZO_fake_script)()
+local function VLVY_fake_script() -- Exit.LocalScript 
+	local script = Instance.new('LocalScript', Exit)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(VLVY_fake_script)()
