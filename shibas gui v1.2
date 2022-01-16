@@ -1,5 +1,5 @@
--- Gui to Lua
--- Version: 3.2
+--shibas gui
+--version 1.2
 
 -- Instances:
 
@@ -11,15 +11,13 @@ local enterspeed = Instance.new("TextBox")
 local setspeed = Instance.new("TextButton")
 local fly = Instance.new("TextButton")
 local clicktotp = Instance.new("TextButton")
-local tools = Instance.new("TextButton")
 local closegui = Instance.new("TextButton")
-local btools = Instance.new("TextButton")
 local telekenisis = Instance.new("TextButton")
 local walkonwalls = Instance.new("TextButton")
+local noclip = Instance.new("TextButton")
+local infinitejump = Instance.new("TextButton")
+local btools = Instance.new("TextButton")
 local opengui = Instance.new("TextButton")
-local Main = Instance.new("Frame")
-local Putthetoolinsidehere = Instance.new("TextButton")
-local Putthetoolinsidehere_2 = Instance.new("TextButton")
 
 --Properties:
 
@@ -61,8 +59,8 @@ TextLabel_2.TextWrapped = true
 enterspeed.Name = "enterspeed"
 enterspeed.Parent = Frame
 enterspeed.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-enterspeed.Position = UDim2.new(0.00766432332, 0, 0.212561101, 0)
-enterspeed.Size = UDim2.new(0, 164, 0, 30)
+enterspeed.Position = UDim2.new(-0.00118523417, 0, 0.219772637, 0)
+enterspeed.Size = UDim2.new(0, 156, 0, 30)
 enterspeed.Font = Enum.Font.SciFi
 enterspeed.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
 enterspeed.PlaceholderText = "enter speed here"
@@ -74,18 +72,18 @@ setspeed.Name = "setspeed"
 setspeed.Parent = Frame
 setspeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 setspeed.BorderColor3 = Color3.fromRGB(38, 25, 53)
-setspeed.Position = UDim2.new(0, 0, 0.286256939, 0)
-setspeed.Size = UDim2.new(0, 166, 0, 37)
+setspeed.Position = UDim2.new(0, 0, 0.291888028, 0)
+setspeed.Size = UDim2.new(0, 156, 0, 30)
 setspeed.Style = Enum.ButtonStyle.RobloxRoundButton
 setspeed.Font = Enum.Font.SciFi
 setspeed.Text = "set speed"
 setspeed.TextColor3 = Color3.fromRGB(0, 0, 0)
-setspeed.TextSize = 40.000
+setspeed.TextSize = 31.000
 
 fly.Name = "fly"
 fly.Parent = Frame
 fly.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-fly.Position = UDim2.new(0.51787138, 0, 0.210259363, 0)
+fly.Position = UDim2.new(0.51787138, 0, 0.219874755, 0)
 fly.Size = UDim2.new(0, 156, 0, 30)
 fly.Font = Enum.Font.SourceSans
 fly.Text = "enable double jump fly"
@@ -97,26 +95,14 @@ fly.TextWrapped = true
 clicktotp.Name = "clicktotp"
 clicktotp.Parent = Frame
 clicktotp.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-clicktotp.Position = UDim2.new(0.0183470696, 0, 0.423540056, 0)
-clicktotp.Size = UDim2.new(0, 169, 0, 30)
+clicktotp.Position = UDim2.new(0.517871439, 0, 0.293732345, 0)
+clicktotp.Size = UDim2.new(0, 156, 0, 30)
 clicktotp.Font = Enum.Font.SourceSans
 clicktotp.Text = "ctrl+click tp"
 clicktotp.TextColor3 = Color3.fromRGB(0, 0, 0)
 clicktotp.TextScaled = true
 clicktotp.TextSize = 14.000
 clicktotp.TextWrapped = true
-
-tools.Name = "tools"
-tools.Parent = Frame
-tools.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-tools.Position = UDim2.new(0.537521124, 0, 0.423540056, 0)
-tools.Size = UDim2.new(0, 156, 0, 30)
-tools.Font = Enum.Font.SourceSans
-tools.Text = "tools"
-tools.TextColor3 = Color3.fromRGB(0, 0, 0)
-tools.TextScaled = true
-tools.TextSize = 14.000
-tools.TextWrapped = true
 
 closegui.Name = "closegui"
 closegui.Parent = Frame
@@ -130,22 +116,10 @@ closegui.TextColor3 = Color3.fromRGB(255, 0, 0)
 closegui.TextSize = 57.000
 closegui.TextWrapped = true
 
-btools.Name = "btools"
-btools.Parent = Frame
-btools.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-btools.Position = UDim2.new(0.0193463434, 0, 0.510740161, 0)
-btools.Size = UDim2.new(0, 168, 0, 30)
-btools.Font = Enum.Font.SourceSans
-btools.Text = "btools"
-btools.TextColor3 = Color3.fromRGB(0, 0, 0)
-btools.TextScaled = true
-btools.TextSize = 14.000
-btools.TextWrapped = true
-
 telekenisis.Name = "telekenisis"
 telekenisis.Parent = Frame
 telekenisis.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-telekenisis.Position = UDim2.new(0.535570562, 0, 0.510740161, 0)
+telekenisis.Position = UDim2.new(0.00754696503, 0, 0.371317089, 0)
 telekenisis.Size = UDim2.new(0, 157, 0, 30)
 telekenisis.Font = Enum.Font.SourceSans
 telekenisis.Text = "telekinesis"
@@ -157,14 +131,50 @@ telekenisis.TextWrapped = true
 walkonwalls.Name = "walkonwalls"
 walkonwalls.Parent = Frame
 walkonwalls.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-walkonwalls.Position = UDim2.new(0.0163964927, 0, 0.59968245, 0)
-walkonwalls.Size = UDim2.new(0, 168, 0, 30)
+walkonwalls.Position = UDim2.new(0.00754693383, 0, 0.44343242, 0)
+walkonwalls.Size = UDim2.new(0, 157, 0, 30)
 walkonwalls.Font = Enum.Font.SourceSans
 walkonwalls.Text = "walk on walls"
 walkonwalls.TextColor3 = Color3.fromRGB(0, 0, 0)
 walkonwalls.TextScaled = true
 walkonwalls.TextSize = 14.000
 walkonwalls.TextWrapped = true
+
+noclip.Name = "noclip"
+noclip.Parent = Frame
+noclip.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
+noclip.Position = UDim2.new(0.51787138, 0, 0.433817029, 0)
+noclip.Size = UDim2.new(0, 156, 0, 30)
+noclip.Font = Enum.Font.SourceSans
+noclip.Text = "toggle noclip"
+noclip.TextColor3 = Color3.fromRGB(0, 0, 0)
+noclip.TextScaled = true
+noclip.TextSize = 14.000
+noclip.TextWrapped = true
+
+infinitejump.Name = "infinite jump"
+infinitejump.Parent = Frame
+infinitejump.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
+infinitejump.Position = UDim2.new(0.00754689798, 0, 0.515547872, 0)
+infinitejump.Size = UDim2.new(0, 157, 0, 30)
+infinitejump.Font = Enum.Font.SourceSans
+infinitejump.Text = "infinite jump"
+infinitejump.TextColor3 = Color3.fromRGB(0, 0, 0)
+infinitejump.TextScaled = true
+infinitejump.TextSize = 14.000
+infinitejump.TextWrapped = true
+
+btools.Name = "btools"
+btools.Parent = Frame
+btools.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
+btools.Position = UDim2.new(0, 176, 0, 150)
+btools.Size = UDim2.new(0, 156, 0, 30)
+btools.Font = Enum.Font.SourceSans
+btools.Text = "btools"
+btools.TextColor3 = Color3.fromRGB(0, 0, 0)
+btools.TextScaled = true
+btools.TextSize = 14.000
+btools.TextWrapped = true
 
 opengui.Name = "opengui"
 opengui.Parent = shibasgui
@@ -181,35 +191,9 @@ opengui.TextScaled = true
 opengui.TextSize = 14.000
 opengui.TextWrapped = true
 
-Main.Name = "Main"
-Main.Parent = shibasgui
-Main.BackgroundColor3 = Color3.fromRGB(0, 51, 102)
-Main.BorderColor3 = Color3.fromRGB(255, 0, 0)
-Main.Position = UDim2.new(0, 140, 0, 179)
-Main.Size = UDim2.new(0, 120, 0, 109)
-Main.Visible = false
-
-Putthetoolinsidehere.Name = "Put the tool inside here"
-Putthetoolinsidehere.Parent = Main
-Putthetoolinsidehere.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
-Putthetoolinsidehere.BorderColor3 = Color3.fromRGB(208, 0, 0)
-Putthetoolinsidehere.Position = UDim2.new(0, 5, 0, 75)
-Putthetoolinsidehere.Size = UDim2.new(1, -10, 0, 30)
-Putthetoolinsidehere.Text = "1 shot sword"
-Putthetoolinsidehere.TextColor3 = Color3.fromRGB(8, 8, 8)
-
-Putthetoolinsidehere_2.Name = "Put the tool inside here"
-Putthetoolinsidehere_2.Parent = Main
-Putthetoolinsidehere_2.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
-Putthetoolinsidehere_2.BorderColor3 = Color3.fromRGB(208, 0, 0)
-Putthetoolinsidehere_2.Position = UDim2.new(0, 5, 0, 40)
-Putthetoolinsidehere_2.Size = UDim2.new(1, -10, 0, 30)
-Putthetoolinsidehere_2.Text = "Timestop Dagger"
-Putthetoolinsidehere_2.TextColor3 = Color3.fromRGB(8, 8, 8)
-
 -- Scripts:
 
-local function CCWSCKM_fake_script() -- setspeed.LocalScript 
+local function XIJWJG_fake_script() -- setspeed.LocalScript 
 	local script = Instance.new('LocalScript', setspeed)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -221,8 +205,8 @@ local function CCWSCKM_fake_script() -- setspeed.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CCWSCKM_fake_script)()
-local function FLZT_fake_script() -- Frame.Drag 
+coroutine.wrap(XIJWJG_fake_script)()
+local function BTESQYU_fake_script() -- Frame.Drag 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -260,8 +244,8 @@ local function FLZT_fake_script() -- Frame.Drag
 		end
 	end)
 end
-coroutine.wrap(FLZT_fake_script)()
-local function AZHYXKK_fake_script() -- fly.Fly 
+coroutine.wrap(BTESQYU_fake_script)()
+local function YKXJN_fake_script() -- fly.Fly 
 	local script = Instance.new('LocalScript', fly)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -374,8 +358,8 @@ local function AZHYXKK_fake_script() -- fly.Fly
 		end)
 		end)
 end
-coroutine.wrap(AZHYXKK_fake_script)()
-local function FUJH_fake_script() -- clicktotp.LocalScript 
+coroutine.wrap(YKXJN_fake_script)()
+local function DUHZCV_fake_script() -- clicktotp.LocalScript 
 	local script = Instance.new('LocalScript', clicktotp)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -412,16 +396,8 @@ local function FUJH_fake_script() -- clicktotp.LocalScript
 		end)
 		end)
 end
-coroutine.wrap(FUJH_fake_script)()
-local function EHFATJM_fake_script() -- tools.Open and Close 
-	local script = Instance.new('LocalScript', tools)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer.PlayerGui.shibasgui.Main.Visible = true -- will appear
-	end)
-end
-coroutine.wrap(EHFATJM_fake_script)()
-local function RUMLMQ_fake_script() -- closegui.LocalScript 
+coroutine.wrap(DUHZCV_fake_script)()
+local function QVDLARB_fake_script() -- closegui.LocalScript 
 	local script = Instance.new('LocalScript', closegui)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -429,29 +405,8 @@ local function RUMLMQ_fake_script() -- closegui.LocalScript
 		game.Players.LocalPlayer.PlayerGui.shibasgui.opengui.Visible = true
 	end)
 end
-coroutine.wrap(RUMLMQ_fake_script)()
-local function QHJQH_fake_script() -- btools.LocalScript 
-	local script = Instance.new('LocalScript', btools)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local copy = Instance.new("HopperBin")
-		copy.Name = "Copy"
-		copy.BinType = "Clone"
-		copy.Parent = script.Parent.Parent.Parent.Parent.Parent.Backpack
-	
-		local delete = Instance.new("HopperBin")
-		delete.Name = "Delete"
-		delete.BinType = "Hammer"
-		delete.Parent = script.Parent.Parent.Parent.Parent.Parent.Backpack
-	
-		local grab = Instance.new("HopperBin")
-		grab.Name = "Grab"
-		grab.BinType = "Grab"
-		grab.Parent = script.Parent.Parent.Parent.Parent.Parent.Backpack
-	end)
-end
-coroutine.wrap(QHJQH_fake_script)()
-local function RACJ_fake_script() -- telekenisis.LocalScript 
+coroutine.wrap(QVDLARB_fake_script)()
+local function ZLBNHUT_fake_script() -- telekenisis.LocalScript 
 	local script = Instance.new('LocalScript', telekenisis)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -777,16 +732,110 @@ local function RACJ_fake_script() -- telekenisis.LocalScript
 		end
 		end)
 end
-coroutine.wrap(RACJ_fake_script)()
-local function TNCSSME_fake_script() -- walkonwalls.LocalScript 
+coroutine.wrap(ZLBNHUT_fake_script)()
+local function OPSQ_fake_script() -- walkonwalls.LocalScript 
 	local script = Instance.new('LocalScript', walkonwalls)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/scriptsforvideos1/main/walkonwalls.lua"))();
 		end)
 end
-coroutine.wrap(TNCSSME_fake_script)()
-local function XKUXVN_fake_script() -- opengui.LocalScript 
+coroutine.wrap(OPSQ_fake_script)()
+local function KCMY_fake_script() -- noclip.NoClip 
+	local script = Instance.new('LocalScript', noclip)
+
+	noclip = false
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		wait(0.2)
+		noclip = true
+		if noclip then
+	
+	
+	nam = game.Players.LocalPlayer.Name
+	
+	coroutine.wrap(function()
+	while wait() do
+	for a, b in pairs(Workspace[nam]:GetChildren()) do
+	if b:FindFirstChild('Handle') then
+	b.Handle.CanCollide = false
+	end
+	end
+	end
+	end)()
+	
+	Workspace[nam].Humanoid.Changed:connect(function()
+	Workspace[nam].Humanoid.WalkSpeed = 16
+	end)
+	
+	game:GetService('Players').LocalPlayer.PlayerGui.ChildAdded:connect(function(asd)
+	delay(0, function()
+	if asd.Name ~= 'OutputGUI' then
+	asd:Destroy()
+	end
+	end)
+	end)
+	
+	game:GetService('RunService').Stepped:connect(function()
+	Workspace[nam].Torso.CanCollide = noclip
+	Workspace[nam].Head.CanCollide = noclip
+	end)
+	
+	Workspace[nam].Torso.Changed:connect(function()
+	Workspace[nam].Torso.CanCollide = noclip
+	Workspace[nam].Head.CanCollide = noclip
+		end)
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if noclip then
+			wait(0.5)
+			noclip = false
+		end
+	end)
+end
+coroutine.wrap(KCMY_fake_script)()
+local function SKDB_fake_script() -- infinitejump.spamsit 
+	local script = Instance.new('LocalScript', infinitejump)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local p = game.Players.LocalPlayer
+	while true do
+		wait()
+		
+		if p.Character then
+			local h = p.Character:FindFirstChild("Humanoid")
+			if h and h.Jump then
+				h:ChangeState(Enum.HumanoidStateType.Jumping)
+			end
+		end
+		end
+		end)
+end
+coroutine.wrap(SKDB_fake_script)()
+local function POJDVPE_fake_script() -- btools.LocalScript 
+	local script = Instance.new('LocalScript', btools)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local copy = Instance.new("HopperBin")
+		copy.Name = "Copy"
+		copy.BinType = "Clone"
+		copy.Parent = script.Parent.Parent.Parent.Parent.Parent.Backpack
+	
+		local delete = Instance.new("HopperBin")
+		delete.Name = "Delete"
+		delete.BinType = "Hammer"
+		delete.Parent = script.Parent.Parent.Parent.Parent.Parent.Backpack
+	
+		local grab = Instance.new("HopperBin")
+		grab.Name = "Grab"
+		grab.BinType = "Grab"
+		grab.Parent = script.Parent.Parent.Parent.Parent.Parent.Backpack
+	end)
+end
+coroutine.wrap(POJDVPE_fake_script)()
+local function ENND_fake_script() -- opengui.LocalScript 
 	local script = Instance.new('LocalScript', opengui)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -794,75 +843,4 @@ local function XKUXVN_fake_script() -- opengui.LocalScript
 		game.Players.LocalPlayer.PlayerGui.shibasgui.opengui.Visible = false
 	end)
 end
-coroutine.wrap(XKUXVN_fake_script)()
-local function FZWVM_fake_script() -- Main.Drag 
-	local script = Instance.new('LocalScript', Main)
-
-	local UIS = game:GetService('UserInputService')
-	local frame = script.Parent
-	local dragToggle = nil
-	local dragSpeed = 0.25
-	local dragStart = nil
-	local startPos = nil
-	
-	local function updateInput(input)
-		local delta = input.Position - dragStart
-		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-	end
-	
-	frame.InputBegan:Connect(function(input)
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-			dragToggle = true
-			dragStart = input.Position
-			startPos = frame.Position
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragToggle = false
-				end
-			end)
-		end
-	end)
-	
-	UIS.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			if dragToggle then
-				updateInput(input)
-			end
-		end
-	end)
-end
-coroutine.wrap(FZWVM_fake_script)()
-local function DUFTCMC_fake_script() -- shibasgui.GiverScript 
-	local script = Instance.new('Script', shibasgui)
-
-	player = script.Parent.Parent.Parent
-	backpack = player.Backpack
-	
-	function chooseClass(class)
-		for i, v in pairs(backpack:GetChildren()) do v:remove() end
-		for i, v in pairs(class:GetChildren()) do
-			if v:IsA("Tool") then
-				v:clone().Parent = backpack
-			elseif v:IsA("HopperBin") then
-				v:clone().Parent = backpack
-			end
-		end
-		
-		script.Parent.Main.Visible = false
-		script.Parent.Title.Visible = false
-	end
-	
-	function onHumanoidDied(humanoid, player)
-		script.Parent.Main.Visible = false
-		script.Parent.Title.Visible = false
-		end
-	
-	for i, v in pairs(script.Parent.Main:GetChildren()) do
-		v.MouseButton1Up:connect(function () chooseClass(v) end)
-	end
-	
-	
-end
-coroutine.wrap(DUFTCMC_fake_script)()
+coroutine.wrap(ENND_fake_script)()
