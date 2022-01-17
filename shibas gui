@@ -1,5 +1,5 @@
 --shibas gui
---v1.3
+--v1.4
 
 -- Instances:
 
@@ -20,6 +20,8 @@ local btools = Instance.new("TextButton")
 local invisible = Instance.new("TextButton")
 local sprint = Instance.new("TextButton")
 local version = Instance.new("TextLabel")
+local shiba = Instance.new("ImageLabel")
+local version_2 = Instance.new("TextLabel")
 local opengui = Instance.new("TextButton")
 
 --Properties:
@@ -212,12 +214,33 @@ version.BorderSizePixel = 0
 version.Position = UDim2.new(0.749262512, 0, 0.906249881, 0)
 version.Size = UDim2.new(0, 68, 0, 29)
 version.Font = Enum.Font.SourceSans
-version.Text = "v1.3"
+version.Text = "v1.4"
 version.TextColor3 = Color3.fromRGB(0, 0, 0)
 version.TextScaled = true
 version.TextSize = 14.000
 version.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 version.TextWrapped = true
+
+shiba.Name = "shiba"
+shiba.Parent = Frame
+shiba.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+shiba.Position = UDim2.new(0, 0, 0.0697115362, 0)
+shiba.Size = UDim2.new(0, 62, 0, 62)
+shiba.Image = "http://www.roblox.com/asset/?id=4714567304"
+
+version_2.Name = "version"
+version_2.Parent = Frame
+version_2.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
+version_2.BorderSizePixel = 0
+version_2.Position = UDim2.new(0.766961455, 0, 0.968749821, 0)
+version_2.Size = UDim2.new(0, 56, 0, 11)
+version_2.Font = Enum.Font.SourceSans
+version_2.Text = "few patches"
+version_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+version_2.TextScaled = true
+version_2.TextSize = 14.000
+version_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+version_2.TextWrapped = true
 
 opengui.Name = "opengui"
 opengui.Parent = shibasgui
@@ -236,7 +259,7 @@ opengui.TextWrapped = true
 
 -- Scripts:
 
-local function FHHMQUM_fake_script() -- setspeed.LocalScript 
+local function LEXQGQQ_fake_script() -- setspeed.LocalScript 
 	local script = Instance.new('LocalScript', setspeed)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -248,8 +271,8 @@ local function FHHMQUM_fake_script() -- setspeed.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FHHMQUM_fake_script)()
-local function BNUYT_fake_script() -- Frame.Drag 
+coroutine.wrap(LEXQGQQ_fake_script)()
+local function RRHPLIP_fake_script() -- Frame.Drag 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -287,8 +310,8 @@ local function BNUYT_fake_script() -- Frame.Drag
 		end
 	end)
 end
-coroutine.wrap(BNUYT_fake_script)()
-local function FMLHM_fake_script() -- fly.Fly 
+coroutine.wrap(RRHPLIP_fake_script)()
+local function DUCOHH_fake_script() -- fly.Fly 
 	local script = Instance.new('LocalScript', fly)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -401,8 +424,8 @@ local function FMLHM_fake_script() -- fly.Fly
 		end)
 		end)
 end
-coroutine.wrap(FMLHM_fake_script)()
-local function OLTZXG_fake_script() -- clicktotp.LocalScript 
+coroutine.wrap(DUCOHH_fake_script)()
+local function XYXLSC_fake_script() -- clicktotp.LocalScript 
 	local script = Instance.new('LocalScript', clicktotp)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -439,8 +462,8 @@ local function OLTZXG_fake_script() -- clicktotp.LocalScript
 		end)
 		end)
 end
-coroutine.wrap(OLTZXG_fake_script)()
-local function ANRMHBN_fake_script() -- closegui.LocalScript 
+coroutine.wrap(XYXLSC_fake_script)()
+local function NIRWWD_fake_script() -- closegui.LocalScript 
 	local script = Instance.new('LocalScript', closegui)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -448,8 +471,8 @@ local function ANRMHBN_fake_script() -- closegui.LocalScript
 		game.Players.LocalPlayer.PlayerGui.shibasgui.opengui.Visible = true
 	end)
 end
-coroutine.wrap(ANRMHBN_fake_script)()
-local function DXGMNZA_fake_script() -- telekenisis.LocalScript 
+coroutine.wrap(NIRWWD_fake_script)()
+local function BTEJIQ_fake_script() -- telekenisis.LocalScript 
 	local script = Instance.new('LocalScript', telekenisis)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -775,22 +798,21 @@ local function DXGMNZA_fake_script() -- telekenisis.LocalScript
 		end
 		end)
 end
-coroutine.wrap(DXGMNZA_fake_script)()
-local function SHWIAYF_fake_script() -- walkonwalls.LocalScript 
+coroutine.wrap(BTEJIQ_fake_script)()
+local function DWPXLAM_fake_script() -- walkonwalls.LocalScript 
 	local script = Instance.new('LocalScript', walkonwalls)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/scriptsforvideos1/main/walkonwalls.lua"))();
 		end)
 end
-coroutine.wrap(SHWIAYF_fake_script)()
-local function GQLF_fake_script() -- noclip.NoClip 
+coroutine.wrap(DWPXLAM_fake_script)()
+local function JBLDYTM_fake_script() -- noclip.NoClip 
 	local script = Instance.new('LocalScript', noclip)
 
-	noclip = false
 	script.Parent.MouseButton1Click:Connect(function()
 		
-		wait(0.2)
+		wait(0.01)
 		noclip = true
 		if noclip then
 	
@@ -833,13 +855,13 @@ local function GQLF_fake_script() -- noclip.NoClip
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if noclip then
-			wait(0.5)
+			wait(0.09)
 			noclip = false
 		end
 	end)
 end
-coroutine.wrap(GQLF_fake_script)()
-local function EPOJH_fake_script() -- infinitejump.spamsit 
+coroutine.wrap(JBLDYTM_fake_script)()
+local function JKJAK_fake_script() -- infinitejump.spamsit 
 	local script = Instance.new('LocalScript', infinitejump)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -856,8 +878,8 @@ local function EPOJH_fake_script() -- infinitejump.spamsit
 		end
 		end)
 end
-coroutine.wrap(EPOJH_fake_script)()
-local function MAUSJRN_fake_script() -- btools.LocalScript 
+coroutine.wrap(JKJAK_fake_script)()
+local function NXEGRR_fake_script() -- btools.LocalScript 
 	local script = Instance.new('LocalScript', btools)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -878,8 +900,8 @@ local function MAUSJRN_fake_script() -- btools.LocalScript
 		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Unlock Workspace Baseparts.txt"))()
 	end)
 end
-coroutine.wrap(MAUSJRN_fake_script)()
-local function YCPTS_fake_script() -- invisible.invis 
+coroutine.wrap(NXEGRR_fake_script)()
+local function HVWEXJL_fake_script() -- invisible.invis 
 	local script = Instance.new('LocalScript', invisible)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -934,10 +956,18 @@ local function YCPTS_fake_script() -- invisible.invis
 		if rightFoot then rightFoot.Transparency = 1 end
 		end)
 end
-coroutine.wrap(YCPTS_fake_script)()
-local function BMXOG_fake_script() -- Frame.SoundsandNotifs 
+coroutine.wrap(HVWEXJL_fake_script)()
+local function IGEPIBG_fake_script() -- Frame.SoundsandNotifs 
 	local script = Instance.new('LocalScript', Frame)
 
+	if game.Players.LocalPlayer.PlayerGui.shibasgui.Frame.Visible == true then -- Start of function
+		local newsound = Instance.new("Sound") -- Creating a new sound
+		newsound.Name = "NewSound" -- Naming our sound
+		newsound.SoundId = "rbxassetid://1841186788" -- Giving the sound its ID
+		newsound.Parent = game.Players.LocalPlayer.PlayerGui.shibasgui.Frame -- Defining the sound's parent
+		newsound:Play() -- Making sure the sound plays
+	end -- Closing the function
+	
 	game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "shibas gui",
 		Text = "Thanks for using shibas gui!",
@@ -952,49 +982,31 @@ local function BMXOG_fake_script() -- Frame.SoundsandNotifs
 		Duration = 5
 	})
 end
-coroutine.wrap(BMXOG_fake_script)()
-local function VBVQ_fake_script() -- sprint.SprintScript 
+coroutine.wrap(IGEPIBG_fake_script)()
+local function IJAQT_fake_script() -- sprint.SprintScript 
 	local script = Instance.new('LocalScript', sprint)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		local mouse = game.Players.LocalPlayer:GetMouse()
-	local running = false
+		repeat wait() until game.Players.LocalPlayer
 	
-	function getTool()	
-		for _, kid in ipairs(script.Parent:GetChildren()) do
-			if kid.className == "Tool" then return kid end
-		end
-		return nil
-	end
+		m = game.Players.LocalPlayer:GetMouse()
 	
-	
-	mouse.KeyDown:connect(function (key) -- Run function
-		key = string.lower(key)
-		if string.byte(key) == 48 then
-			running = true
-			local keyConnection = mouse.KeyUp:connect(function (key)
-				if string.byte(key) == 48 then
-					running = false
-				end
-			end)
-			for i = 1,5 do
-				game.Workspace.CurrentCamera.FieldOfView = (70+(i*2))
-				wait()
+		m.KeyDown:connect(function(key)
+			if key == "0" then --"Shift to run" 0 == shift
+				print("Running")
+				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 32 --change "25" to your speed you want
 			end
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
-			repeat wait () until running == false
-			keyConnection:disconnect()
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-			for i = 1,5 do
-				game.Workspace.CurrentCamera.FieldOfView = (80-(i*2))
-				wait()
+		end)
+	
+		m.KeyUp:connect(function(key)
+			if key == "0" then
+				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16 --change "16" to your speed you want when you stop running
 			end
-		end
 		end)
-		end)
+	end)
 end
-coroutine.wrap(VBVQ_fake_script)()
-local function HSBXGX_fake_script() -- opengui.LocalScript 
+coroutine.wrap(IJAQT_fake_script)()
+local function TKUMXLM_fake_script() -- opengui.LocalScript 
 	local script = Instance.new('LocalScript', opengui)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1002,4 +1014,4 @@ local function HSBXGX_fake_script() -- opengui.LocalScript
 		game.Players.LocalPlayer.PlayerGui.shibasgui.opengui.Visible = false
 	end)
 end
-coroutine.wrap(HSBXGX_fake_script)()
+coroutine.wrap(TKUMXLM_fake_script)()
