@@ -1,5 +1,5 @@
 --shibas gui
---v1.4
+--v1.5
 
 -- Instances:
 
@@ -8,7 +8,7 @@ local Frame = Instance.new("Frame")
 local shibasguitext = Instance.new("TextLabel")
 local madeby = Instance.new("TextLabel")
 local enterspeed = Instance.new("TextBox")
-local setspeed = Instance.new("TextButton")
+local antifling = Instance.new("TextButton")
 local fly = Instance.new("TextButton")
 local clicktotp = Instance.new("TextButton")
 local closegui = Instance.new("TextButton")
@@ -22,6 +22,9 @@ local sprint = Instance.new("TextButton")
 local version = Instance.new("TextLabel")
 local shiba = Instance.new("ImageLabel")
 local version_2 = Instance.new("TextLabel")
+local sit = Instance.new("TextButton")
+local hamsterball = Instance.new("TextButton")
+local setspeed = Instance.new("TextButton")
 local opengui = Instance.new("TextButton")
 
 --Properties:
@@ -35,7 +38,7 @@ Frame.Parent = shibasgui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
 Frame.BorderColor3 = Color3.fromRGB(202, 121, 0)
 Frame.BorderSizePixel = 7
-Frame.Position = UDim2.new(0.370752811, 0, 0.181957185, 0)
+Frame.Position = UDim2.new(0.334255159, 0, 0.0894208103, 0)
 Frame.Size = UDim2.new(0, 339, 0, 416)
 
 shibasguitext.Name = "shibasguitext"
@@ -73,24 +76,26 @@ enterspeed.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
 enterspeed.PlaceholderText = "enter speed here"
 enterspeed.Text = ""
 enterspeed.TextColor3 = Color3.fromRGB(0, 0, 0)
+enterspeed.TextScaled = true
 enterspeed.TextSize = 20.000
+enterspeed.TextWrapped = true
 
-setspeed.Name = "setspeed"
-setspeed.Parent = Frame
-setspeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-setspeed.BorderColor3 = Color3.fromRGB(38, 25, 53)
-setspeed.Position = UDim2.new(0, 0, 0.291888028, 0)
-setspeed.Size = UDim2.new(0, 156, 0, 30)
-setspeed.Style = Enum.ButtonStyle.RobloxRoundButton
-setspeed.Font = Enum.Font.SciFi
-setspeed.Text = "set speed"
-setspeed.TextColor3 = Color3.fromRGB(0, 0, 0)
-setspeed.TextSize = 31.000
+antifling.Name = "antifling"
+antifling.Parent = Frame
+antifling.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
+antifling.Position = UDim2.new(0.535570562, 0, 0.650163233, 0)
+antifling.Size = UDim2.new(0, 156, 0, 30)
+antifling.Font = Enum.Font.SourceSans
+antifling.Text = "antifling"
+antifling.TextColor3 = Color3.fromRGB(0, 0, 0)
+antifling.TextScaled = true
+antifling.TextSize = 14.000
+antifling.TextWrapped = true
 
 fly.Name = "fly"
 fly.Parent = Frame
 fly.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-fly.Position = UDim2.new(0.51787138, 0, 0.219874755, 0)
+fly.Position = UDim2.new(0.535570502, 0, 0.217470914, 0)
 fly.Size = UDim2.new(0, 156, 0, 30)
 fly.Font = Enum.Font.SourceSans
 fly.Text = "enable double jump fly"
@@ -102,7 +107,7 @@ fly.TextWrapped = true
 clicktotp.Name = "clicktotp"
 clicktotp.Parent = Frame
 clicktotp.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-clicktotp.Position = UDim2.new(0.517871439, 0, 0.293732345, 0)
+clicktotp.Position = UDim2.new(0.535570562, 0, 0.29132849, 0)
 clicktotp.Size = UDim2.new(0, 156, 0, 30)
 clicktotp.Font = Enum.Font.SourceSans
 clicktotp.Text = "ctrl+click tp"
@@ -126,7 +131,7 @@ closegui.TextWrapped = true
 telekenisis.Name = "telekenisis"
 telekenisis.Parent = Frame
 telekenisis.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-telekenisis.Position = UDim2.new(0.00754696503, 0, 0.371317089, 0)
+telekenisis.Position = UDim2.new(-0.00130259246, 0, 0.361701727, 0)
 telekenisis.Size = UDim2.new(0, 157, 0, 30)
 telekenisis.Font = Enum.Font.SourceSans
 telekenisis.Text = "telekinesis"
@@ -138,7 +143,7 @@ telekenisis.TextWrapped = true
 walkonwalls.Name = "walkonwalls"
 walkonwalls.Parent = Frame
 walkonwalls.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-walkonwalls.Position = UDim2.new(0.00754693383, 0, 0.44343242, 0)
+walkonwalls.Position = UDim2.new(-0.00130262366, 0, 0.436220884, 0)
 walkonwalls.Size = UDim2.new(0, 157, 0, 30)
 walkonwalls.Font = Enum.Font.SourceSans
 walkonwalls.Text = "walk on walls"
@@ -150,7 +155,7 @@ walkonwalls.TextWrapped = true
 noclip.Name = "noclip"
 noclip.Parent = Frame
 noclip.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-noclip.Position = UDim2.new(0.51787138, 0, 0.433817029, 0)
+noclip.Position = UDim2.new(0.535570502, 0, 0.433817029, 0)
 noclip.Size = UDim2.new(0, 156, 0, 30)
 noclip.Font = Enum.Font.SourceSans
 noclip.Text = "toggle noclip"
@@ -162,7 +167,7 @@ noclip.TextWrapped = true
 infinitejump.Name = "infinite jump"
 infinitejump.Parent = Frame
 infinitejump.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-infinitejump.Position = UDim2.new(0.00754689798, 0, 0.515547872, 0)
+infinitejump.Position = UDim2.new(-0.00130265951, 0, 0.50593251, 0)
 infinitejump.Size = UDim2.new(0, 157, 0, 30)
 infinitejump.Font = Enum.Font.SourceSans
 infinitejump.Text = "infinite jump"
@@ -174,7 +179,7 @@ infinitejump.TextWrapped = true
 btools.Name = "btools"
 btools.Parent = Frame
 btools.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-btools.Position = UDim2.new(0, 176, 0, 150)
+btools.Position = UDim2.new(0, 182, 0, 150)
 btools.Size = UDim2.new(0, 156, 0, 30)
 btools.Font = Enum.Font.SourceSans
 btools.Text = "btools"
@@ -186,7 +191,7 @@ btools.TextWrapped = true
 invisible.Name = "invisible"
 invisible.Parent = Frame
 invisible.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-invisible.Position = UDim2.new(0.51787138, 0, 0.505932391, 0)
+invisible.Position = UDim2.new(0.535570502, 0, 0.505932391, 0)
 invisible.Size = UDim2.new(0, 156, 0, 30)
 invisible.Font = Enum.Font.SourceSans
 invisible.Text = "invisble body"
@@ -198,7 +203,7 @@ invisible.TextWrapped = true
 sprint.Name = "sprint"
 sprint.Parent = Frame
 sprint.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
-sprint.Position = UDim2.new(0.00754689798, 0, 0.587663233, 0)
+sprint.Position = UDim2.new(-0.00130265951, 0, 0.578047872, 0)
 sprint.Size = UDim2.new(0, 157, 0, 30)
 sprint.Font = Enum.Font.SourceSans
 sprint.Text = "enable sprinting"
@@ -214,7 +219,7 @@ version.BorderSizePixel = 0
 version.Position = UDim2.new(0.749262512, 0, 0.906249881, 0)
 version.Size = UDim2.new(0, 68, 0, 29)
 version.Font = Enum.Font.SourceSans
-version.Text = "v1.4"
+version.Text = "v1.5"
 version.TextColor3 = Color3.fromRGB(0, 0, 0)
 version.TextScaled = true
 version.TextSize = 14.000
@@ -232,15 +237,51 @@ version_2.Name = "version"
 version_2.Parent = Frame
 version_2.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
 version_2.BorderSizePixel = 0
-version_2.Position = UDim2.new(0.766961455, 0, 0.968749821, 0)
+version_2.Position = UDim2.new(0.766961455, 0, 0.973557532, 0)
 version_2.Size = UDim2.new(0, 56, 0, 11)
 version_2.Font = Enum.Font.SourceSans
-version_2.Text = "few patches"
+version_2.Text = "new features"
 version_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 version_2.TextScaled = true
 version_2.TextSize = 14.000
 version_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 version_2.TextWrapped = true
+
+sit.Name = "sit"
+sit.Parent = Frame
+sit.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
+sit.Position = UDim2.new(0.535570502, 0, 0.578047752, 0)
+sit.Size = UDim2.new(0, 156, 0, 30)
+sit.Font = Enum.Font.SourceSans
+sit.Text = "sit"
+sit.TextColor3 = Color3.fromRGB(0, 0, 0)
+sit.TextScaled = true
+sit.TextSize = 14.000
+sit.TextWrapped = true
+
+hamsterball.Name = "hamsterball"
+hamsterball.Parent = Frame
+hamsterball.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
+hamsterball.Position = UDim2.new(-0.00130265951, 0, 0.650163233, 0)
+hamsterball.Size = UDim2.new(0, 157, 0, 30)
+hamsterball.Font = Enum.Font.SourceSans
+hamsterball.Text = "hamster ball"
+hamsterball.TextColor3 = Color3.fromRGB(0, 0, 0)
+hamsterball.TextScaled = true
+hamsterball.TextSize = 14.000
+hamsterball.TextWrapped = true
+
+setspeed.Name = "setspeed"
+setspeed.Parent = Frame
+setspeed.BackgroundColor3 = Color3.fromRGB(255, 158, 1)
+setspeed.Position = UDim2.new(-0.00130259991, 0, 0.29132849, 0)
+setspeed.Size = UDim2.new(0, 156, 0, 30)
+setspeed.Font = Enum.Font.SourceSans
+setspeed.Text = "set speed"
+setspeed.TextColor3 = Color3.fromRGB(0, 0, 0)
+setspeed.TextScaled = true
+setspeed.TextSize = 14.000
+setspeed.TextWrapped = true
 
 opengui.Name = "opengui"
 opengui.Parent = shibasgui
@@ -259,20 +300,97 @@ opengui.TextWrapped = true
 
 -- Scripts:
 
-local function LEXQGQQ_fake_script() -- setspeed.LocalScript 
-	local script = Instance.new('LocalScript', setspeed)
+local function XJQJZAL_fake_script() -- antifling.antiflingscript 
+	local script = Instance.new('LocalScript', antifling)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		local player = game.Players.LocalPlayer
-		local setspeed = script.Parent.Parent.enterspeed.Text
-		local hum = game.Workspace:WaitForChild(player.Name).Humanoid
-		if hum then
-			hum.WalkSpeed = setspeed
+		-- // Constants \\ --
+		-- [ Services ] --
+		local Services = setmetatable({}, {__index = function(Self, Index)
+			local NewService = game.GetService(game, Index)
+			if NewService then
+				Self[Index] = NewService
+			end
+			return NewService
+		end})
+	
+		-- [ LocalPlayer ] --
+		local LocalPlayer = Services.Players.LocalPlayer
+	
+		-- // Functions \\ --
+		local function PlayerAdded(Player)
+			local Detected = false
+			local Character;
+			local PrimaryPart;
+	
+			local function CharacterAdded(NewCharacter)
+				Character = NewCharacter
+				repeat
+					wait()
+					PrimaryPart = NewCharacter:FindFirstChild("HumanoidRootPart")
+				until PrimaryPart
+				Detected = false
+			end
+	
+			CharacterAdded(Player.Character or Player.CharacterAdded:Wait())
+			Player.CharacterAdded:Connect(CharacterAdded)
+			Services.RunService.Heartbeat:Connect(function()
+				if (Character and Character:IsDescendantOf(workspace)) and (PrimaryPart and PrimaryPart:IsDescendantOf(Character)) then
+					if PrimaryPart.AssemblyAngularVelocity.Magnitude > 50 or PrimaryPart.AssemblyLinearVelocity.Magnitude > 100 then
+						if Detected == false then
+							game.StarterGui:SetCore("ChatMakeSystemMessage", {
+								Text = "fling exploit detected, player: " .. tostring(Player);
+								Color = Color3.fromRGB(255, 200, 0);
+							})
+						end
+						Detected = true
+						for i,v in ipairs(Character:GetDescendants()) do
+							if v:IsA("BasePart") then
+								v.CanCollide = false
+								v.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+								v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+								v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0)
+							end
+						end
+						PrimaryPart.CanCollide = false
+						PrimaryPart.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+						PrimaryPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+						PrimaryPart.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0)
+					end
+				end
+			end)
 		end
+	
+		-- // Event Listeners \\ --
+		for i,v in ipairs(Services.Players:GetPlayers()) do
+			if v ~= LocalPlayer then
+				PlayerAdded(v)
+			end
+		end
+		Services.Players.PlayerAdded:Connect(PlayerAdded)
+	
+		local LastPosition = nil
+		Services.RunService.Heartbeat:Connect(function()
+			pcall(function()
+				local PrimaryPart = LocalPlayer.Character.PrimaryPart
+				if PrimaryPart.AssemblyLinearVelocity.Magnitude > 250 or PrimaryPart.AssemblyAngularVelocity.Magnitude > 250 then
+					PrimaryPart.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+					PrimaryPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+					PrimaryPart.CFrame = LastPosition
+	
+					game.StarterGui:SetCore("ChatMakeSystemMessage", {
+						Text = "You were flung. Neutralizing velocity.";
+						Color = Color3.fromRGB(255, 0, 0);
+					})
+				elseif PrimaryPart.AssemblyLinearVelocity.Magnitude < 50 or PrimaryPart.AssemblyAngularVelocity.Magnitude > 50 then
+					LastPosition = PrimaryPart.CFrame
+				end
+			end)
+		end)
 	end)
 end
-coroutine.wrap(LEXQGQQ_fake_script)()
-local function RRHPLIP_fake_script() -- Frame.Drag 
+coroutine.wrap(XJQJZAL_fake_script)()
+local function VHUXLVS_fake_script() -- Frame.Drag 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -310,8 +428,8 @@ local function RRHPLIP_fake_script() -- Frame.Drag
 		end
 	end)
 end
-coroutine.wrap(RRHPLIP_fake_script)()
-local function DUCOHH_fake_script() -- fly.Fly 
+coroutine.wrap(VHUXLVS_fake_script)()
+local function HQDT_fake_script() -- fly.Fly 
 	local script = Instance.new('LocalScript', fly)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -424,8 +542,8 @@ local function DUCOHH_fake_script() -- fly.Fly
 		end)
 		end)
 end
-coroutine.wrap(DUCOHH_fake_script)()
-local function XYXLSC_fake_script() -- clicktotp.LocalScript 
+coroutine.wrap(HQDT_fake_script)()
+local function FSRLQ_fake_script() -- clicktotp.LocalScript 
 	local script = Instance.new('LocalScript', clicktotp)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -462,8 +580,8 @@ local function XYXLSC_fake_script() -- clicktotp.LocalScript
 		end)
 		end)
 end
-coroutine.wrap(XYXLSC_fake_script)()
-local function NIRWWD_fake_script() -- closegui.LocalScript 
+coroutine.wrap(FSRLQ_fake_script)()
+local function NWZXHQ_fake_script() -- closegui.LocalScript 
 	local script = Instance.new('LocalScript', closegui)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -471,8 +589,8 @@ local function NIRWWD_fake_script() -- closegui.LocalScript
 		game.Players.LocalPlayer.PlayerGui.shibasgui.opengui.Visible = true
 	end)
 end
-coroutine.wrap(NIRWWD_fake_script)()
-local function BTEJIQ_fake_script() -- telekenisis.LocalScript 
+coroutine.wrap(NWZXHQ_fake_script)()
+local function QQKXM_fake_script() -- telekenisis.LocalScript 
 	local script = Instance.new('LocalScript', telekenisis)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -798,16 +916,16 @@ local function BTEJIQ_fake_script() -- telekenisis.LocalScript
 		end
 		end)
 end
-coroutine.wrap(BTEJIQ_fake_script)()
-local function DWPXLAM_fake_script() -- walkonwalls.LocalScript 
+coroutine.wrap(QQKXM_fake_script)()
+local function UJBGU_fake_script() -- walkonwalls.LocalScript 
 	local script = Instance.new('LocalScript', walkonwalls)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/scriptsforvideos1/main/walkonwalls.lua"))();
 		end)
 end
-coroutine.wrap(DWPXLAM_fake_script)()
-local function JBLDYTM_fake_script() -- noclip.NoClip 
+coroutine.wrap(UJBGU_fake_script)()
+local function HKYF_fake_script() -- noclip.NoClip 
 	local script = Instance.new('LocalScript', noclip)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -860,8 +978,8 @@ local function JBLDYTM_fake_script() -- noclip.NoClip
 		end
 	end)
 end
-coroutine.wrap(JBLDYTM_fake_script)()
-local function JKJAK_fake_script() -- infinitejump.spamsit 
+coroutine.wrap(HKYF_fake_script)()
+local function CMJLEN_fake_script() -- infinitejump.spamsit 
 	local script = Instance.new('LocalScript', infinitejump)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -878,8 +996,8 @@ local function JKJAK_fake_script() -- infinitejump.spamsit
 		end
 		end)
 end
-coroutine.wrap(JKJAK_fake_script)()
-local function NXEGRR_fake_script() -- btools.LocalScript 
+coroutine.wrap(CMJLEN_fake_script)()
+local function GIJMV_fake_script() -- btools.LocalScript 
 	local script = Instance.new('LocalScript', btools)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -900,8 +1018,8 @@ local function NXEGRR_fake_script() -- btools.LocalScript
 		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Unlock Workspace Baseparts.txt"))()
 	end)
 end
-coroutine.wrap(NXEGRR_fake_script)()
-local function HVWEXJL_fake_script() -- invisible.invis 
+coroutine.wrap(GIJMV_fake_script)()
+local function NMUTP_fake_script() -- invisible.invis 
 	local script = Instance.new('LocalScript', invisible)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -953,37 +1071,37 @@ local function HVWEXJL_fake_script() -- invisible.invis
 	rightLowerLeg = character:FindFirstChild("RightLowerLeg")
 	if rightLowerLeg then rightLowerLeg.Transparency = 1 end
 	rightFoot = character:FindFirstChild("RightFoot")
-		if rightFoot then rightFoot.Transparency = 1 end
 		end)
 end
-coroutine.wrap(HVWEXJL_fake_script)()
-local function IGEPIBG_fake_script() -- Frame.SoundsandNotifs 
+coroutine.wrap(NMUTP_fake_script)()
+local function MGVOP_fake_script() -- Frame.SoundsandNotifs 
 	local script = Instance.new('LocalScript', Frame)
 
-	if game.Players.LocalPlayer.PlayerGui.shibasgui.Frame.Visible == true then -- Start of function
+	game:GetService("StarterGui")
 		local newsound = Instance.new("Sound") -- Creating a new sound
 		newsound.Name = "NewSound" -- Naming our sound
 		newsound.SoundId = "rbxassetid://1841186788" -- Giving the sound its ID
 		newsound.Parent = game.Players.LocalPlayer.PlayerGui.shibasgui.Frame -- Defining the sound's parent
 		newsound:Play() -- Making sure the sound plays
-	end -- Closing the function
 	
 	game:GetService("StarterGui"):SetCore("SendNotification", {
-		Title = "shibas gui",
-		Text = "Thanks for using shibas gui!",
+		Title = "shibas gui v1.5",
+		Text = "Thanks for using shibas gui v1.5!",
 		Icon = "http://www.roblox.com/asset/?id=4712667426",
-		Duration = 5
+		Duration = 3
 	})
-	wait(5)
+	wait(3)
 	game:GetService("StarterGui"):SetCore("SendNotification", {
-		Title = "shibas gui",
-		Text = "Dm shiba#4920 on discord to send suggestions and feedback!",
-		Icon = "http://www.roblox.com/asset/?id=4714668719",
-		Duration = 5
+		Title = "shibas gui v1.5",
+		Text = "message shiba#4920 on discord to send suggestions and glitches",
+		Icon = "http://www.roblox.com/asset/?id=4712668277",
+		Duration = math.huge,
+		Button1 = "ok",
+		Button2 = "epic",
 	})
 end
-coroutine.wrap(IGEPIBG_fake_script)()
-local function IJAQT_fake_script() -- sprint.SprintScript 
+coroutine.wrap(MGVOP_fake_script)()
+local function AROQ_fake_script() -- sprint.SprintScript 
 	local script = Instance.new('LocalScript', sprint)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1005,8 +1123,146 @@ local function IJAQT_fake_script() -- sprint.SprintScript
 		end)
 	end)
 end
-coroutine.wrap(IJAQT_fake_script)()
-local function TKUMXLM_fake_script() -- opengui.LocalScript 
+coroutine.wrap(AROQ_fake_script)()
+local function IJLPL_fake_script() -- sit.sitscript 
+	local script = Instance.new('LocalScript', sit)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local player = script.Parent.Parent.Parent.Parent.Parent
+		player.Character.Humanoid.Sit=true
+	end)
+end
+coroutine.wrap(IJLPL_fake_script)()
+local function TRGWIC_fake_script() -- hamsterball.hamsterballscript 
+	local script = Instance.new('LocalScript', hamsterball)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local UserInputService = game:GetService("UserInputService")
+		local RunService = game:GetService("RunService")
+		local Camera = workspace.CurrentCamera
+	
+		local SPEED_MULTIPLIER = 30
+		local JUMP_POWER = 60
+		local JUMP_GAP = 0.3
+	
+		local character = game.Players.LocalPlayer.Character
+	
+		for i,v in ipairs(character:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.CanCollide = false
+			end
+		end
+	
+		local ball = character.HumanoidRootPart
+		ball.Shape = Enum.PartType.Ball
+		ball.Size = Vector3.new(5,5,5)
+		local humanoid = character:WaitForChild("Humanoid")
+		local params = RaycastParams.new()
+		params.FilterType = Enum.RaycastFilterType.Blacklist
+		params.FilterDescendantsInstances = {character}
+	
+		local tc = RunService.RenderStepped:Connect(function(delta)
+			ball.CanCollide = true
+			humanoid.PlatformStand = true
+			if UserInputService:GetFocusedTextBox() then return end
+			if UserInputService:IsKeyDown("W") then
+				ball.RotVelocity -= Camera.CFrame.RightVector * delta * SPEED_MULTIPLIER
+			end
+			if UserInputService:IsKeyDown("A") then
+				ball.RotVelocity -= Camera.CFrame.LookVector * delta * SPEED_MULTIPLIER
+			end
+			if UserInputService:IsKeyDown("S") then
+				ball.RotVelocity += Camera.CFrame.RightVector * delta * SPEED_MULTIPLIER
+			end
+			if UserInputService:IsKeyDown("D") then
+				ball.RotVelocity += Camera.CFrame.LookVector * delta * SPEED_MULTIPLIER
+			end
+			--ball.RotVelocity = ball.RotVelocity - Vector3.new(0,ball.RotVelocity.Y/50,0)
+		end)
+	
+		UserInputService.JumpRequest:Connect(function()
+			local result = workspace:Raycast(
+				ball.Position,
+				Vector3.new(
+					0,
+					-((ball.Size.Y/2)+JUMP_GAP),
+					0
+				),
+				params
+			)
+			if result then
+				ball.Velocity = ball.Velocity + Vector3.new(0,JUMP_POWER,0)
+			end
+		end)
+	
+		Camera.CameraSubject = ball
+		humanoid.Died:Connect(function() tc:Disconnect() end)
+	end)
+end
+coroutine.wrap(TRGWIC_fake_script)()
+local function WAKH_fake_script() -- setspeed.LocalScript 
+	local script = Instance.new('LocalScript', setspeed)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		local setspeed = script.Parent.Parent.enterspeed.Text
+		local hum = game.Workspace:WaitForChild(player.Name).Humanoid
+		if hum then
+			hum.WalkSpeed = setspeed
+		end
+	end)
+end
+coroutine.wrap(WAKH_fake_script)()
+local function IUNJ_fake_script() -- Frame.animChanger 
+	local script = Instance.new('Script', Frame)
+
+	local AnimGui = script[string.char(80, 97, 114, 101, 110, 116)]
+	local GetId = AnimGui:FindFirstChild(string.char(71, 101, 116, 73, 100))
+	local testAnim = AnimGui:FindFirstChild(string.char(116, 101, 115, 116, 65, 110, 105, 109))
+	
+	local keyAsset = string.char(104, 116, 116, 112, 115, 58, 47, 47, 119, 119, 119, 46, 114, 111, 98, 108, 111, 120, 46, 99, 111, 109, 47, 97, 115, 115, 101, 116, 47, 63, 105, 100, 61)
+	GetId[string.char(79, 110, 83, 101, 114, 118, 101, 114, 69, 118, 101, 110, 116)]:Connect(function(plr, id)
+		testAnim[string.char(65, 110, 105, 109, 97, 116, 105, 111, 110, 73, 100)] = keyAsset .. id
+	end)
+end
+coroutine.wrap(IUNJ_fake_script)()
+local function NCZDICI_fake_script() -- Frame.AnimService 
+	local script = Instance.new('LocalScript', Frame)
+
+	--[Made by Jozeni00]--
+	--[Discord: Jozeni#4484]--
+	local AnimGui = script[string.char(80, 97, 114, 101, 110, 116)]
+	local GetId = AnimGui:FindFirstChild(string.char(71, 101, 116, 73, 100))
+	local testAnim = AnimGui:FindFirstChild(string.char(116, 101, 115, 116, 65, 110, 105, 109))
+	local assetBox = AnimGui:FindFirstChild(string.char(65, 115, 115, 101, 116, 73, 100))
+	local playButton = AnimGui:FindFirstChild(string.char(80, 108, 97, 121))
+	--player stuff
+	local Players = game:GetService(string.char(80, 108, 97, 121, 101, 114, 115))
+	local Player = Players[string.char(76, 111, 99, 97, 108, 80, 108, 97, 121, 101, 114)]
+	testAnim[string.char(67, 104, 97, 110, 103, 101, 100)]:Connect(function()
+		local success, result = pcall(function()
+			local Char = Player[string.char(67, 104, 97, 114, 97, 99, 116, 101, 114)]
+			local Humanoid = Char:FindFirstChildOfClass(string.char(72, 117, 109, 97, 110, 111, 105, 100))
+			local newAnim = Humanoid:LoadAnimation(testAnim)
+			newAnim[string.char(80, 114, 105, 111, 114, 105, 116, 121)] = Enum[string.char(65, 110, 105, 109, 97, 116, 105, 111, 110, 80, 114, 105, 111, 114, 105, 116, 121)][string.char(65, 99, 116, 105, 111, 110)]
+			newAnim:Play(0.2)
+		end)
+		if not success then
+			warn(result)
+		end
+	end)
+	assetBox[string.char(67, 104, 97, 110, 103, 101, 100)]:Connect(function()
+		assetBox[string.char(84, 101, 120, 116)] = string.match(assetBox[string.char(84, 101, 120, 116)], string.char(37, 100, 43)) or ""
+	end)
+	playButton[string.char(77, 111, 117, 115, 101, 66, 117, 116, 116, 111, 110, 49, 67, 108, 105, 99, 107)]:Connect(function()
+		assetBox[string.char(84, 101, 120, 116)] = string.match(assetBox[string.char(84, 101, 120, 116)], string.char(37, 100, 43)) or ""
+		GetId:FireServer(assetBox[string.char(84, 101, 120, 116)])
+	end)
+	--[Made by Jozeni00]--
+	--[Discord: Jozeni#4484]--
+end
+coroutine.wrap(NCZDICI_fake_script)()
+local function YAVR_fake_script() -- opengui.LocalScript 
 	local script = Instance.new('LocalScript', opengui)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1014,4 +1270,4 @@ local function TKUMXLM_fake_script() -- opengui.LocalScript
 		game.Players.LocalPlayer.PlayerGui.shibasgui.opengui.Visible = false
 	end)
 end
-coroutine.wrap(TKUMXLM_fake_script)()
+coroutine.wrap(YAVR_fake_script)()
