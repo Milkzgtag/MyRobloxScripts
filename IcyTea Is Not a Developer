@@ -1,0 +1,47 @@
+-- icytea is not a developer
+-- made by shiba
+
+-- Instances:
+
+local icyteaisnotadeveloper = Instance.new("ScreenGui")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+icyteaisnotadeveloper.Name = "icyteaisnotadeveloper"
+icyteaisnotadeveloper.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+icyteaisnotadeveloper.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextButton.Parent = icyteaisnotadeveloper
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 255, 226)
+TextButton.Position = UDim2.new(0, 0, 0.670611441, 0)
+TextButton.Size = UDim2.new(0, 136, 0, 25)
+TextButton.Font = Enum.Font.SciFi
+TextButton.Text = "Icytea is not a developer"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+-- Scripts:
+
+local function PBAXY_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		request = game:HttpGet("https://raw.githubusercontent.com/ShibaAKA/ScriptsToPowerOtherScripts/main/icytea%20is%20not%20a%20developer")
+	
+	decoded = game.HttpService:JSONDecode(request)
+	
+	local lyrics = {}
+	for i in decoded.lyrics:gmatch("[^\r\n]+") do
+		table.insert(lyrics, i)
+	end
+	
+	for i, v in pairs(lyrics) do
+		wait(3)
+		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(v, "All")
+		end
+		end)
+end
+coroutine.wrap(PBAXY_fake_script)()
