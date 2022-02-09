@@ -1,0 +1,320 @@
+-- Cyero-Project v1.1
+-- Games that work with Cyero:
+-- Lucky Block Battlegrounds
+-- Pet Simulator X
+
+-- Instances:
+
+local CyeroProject = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local CreditsPage = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local scripter = Instance.new("TextLabel")
+local uidesigner = Instance.new("TextLabel")
+local uidesigner_2 = Instance.new("TextLabel")
+local Home = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIGradient_2 = Instance.new("UIGradient")
+local cyeroproject = Instance.new("TextLabel")
+local injectgui = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Pages = Instance.new("Frame")
+local Home_2 = Instance.new("TextButton")
+local Credits = Instance.new("TextButton")
+local Universal = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UniversalPage = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local UIGradient_3 = Instance.new("UIGradient")
+
+--Properties:
+
+CyeroProject.Name = "CyeroProject"
+CyeroProject.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+CyeroProject.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = CyeroProject
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.BorderSizePixel = 2
+Main.Position = UDim2.new(0.363122135, 0, 0.318132341, 0)
+Main.Size = UDim2.new(0, 279, 0, 183)
+
+CreditsPage.Name = "CreditsPage"
+CreditsPage.Parent = Main
+CreditsPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsPage.Position = UDim2.new(-0.00259137154, 0, 0.00106009841, 0)
+CreditsPage.Size = UDim2.new(0, 279, 0, 183)
+CreditsPage.Visible = false
+
+UICorner.CornerRadius = UDim.new(0.200000003, 10)
+UICorner.Parent = CreditsPage
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(163, 163, 163)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(163, 163, 163))}
+UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.00), NumberSequenceKeypoint.new(0.17, 0.46), NumberSequenceKeypoint.new(0.27, 0.57), NumberSequenceKeypoint.new(0.76, 0.35), NumberSequenceKeypoint.new(1.00, 0.00)}
+UIGradient.Parent = CreditsPage
+
+scripter.Name = "scripter"
+scripter.Parent = CreditsPage
+scripter.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scripter.BackgroundTransparency = 1.000
+scripter.Position = UDim2.new(0.139784947, 0, 0.0546448082, 0)
+scripter.Size = UDim2.new(0, 200, 0, 50)
+scripter.Font = Enum.Font.PatrickHand
+scripter.Text = "Scripter: shiba"
+scripter.TextColor3 = Color3.fromRGB(0, 0, 0)
+scripter.TextScaled = true
+scripter.TextSize = 14.000
+scripter.TextWrapped = true
+
+uidesigner.Name = "uidesigner"
+uidesigner.Parent = CreditsPage
+uidesigner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uidesigner.BackgroundTransparency = 1.000
+uidesigner.Position = UDim2.new(0.139784947, 0, 0.612021804, 0)
+uidesigner.Size = UDim2.new(0, 200, 0, 50)
+uidesigner.Font = Enum.Font.PatrickHand
+uidesigner.Text = "UI Designer: Unimox"
+uidesigner.TextColor3 = Color3.fromRGB(0, 0, 0)
+uidesigner.TextScaled = true
+uidesigner.TextSize = 14.000
+uidesigner.TextWrapped = true
+
+uidesigner_2.Name = "uidesigner"
+uidesigner_2.Parent = CreditsPage
+uidesigner_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uidesigner_2.BackgroundTransparency = 1.000
+uidesigner_2.Position = UDim2.new(0.139784947, 0, 0.360655695, 0)
+uidesigner_2.Size = UDim2.new(0, 200, 0, 50)
+uidesigner_2.Font = Enum.Font.PatrickHand
+uidesigner_2.Text = "ALl of the scripts: roblox-scripter.com and robloxscripter.com"
+uidesigner_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+uidesigner_2.TextScaled = true
+uidesigner_2.TextSize = 14.000
+uidesigner_2.TextWrapped = true
+
+Home.Name = "Home"
+Home.Parent = Main
+Home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home.BorderSizePixel = 2
+Home.Position = UDim2.new(0.00111496449, 0, 0.00119245052, 0)
+Home.Size = UDim2.new(0, 279, 0, 183)
+
+UICorner_2.CornerRadius = UDim.new(0.200000003, 10)
+UICorner_2.Parent = Home
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(163, 163, 163)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(163, 163, 163))}
+UIGradient_2.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.00), NumberSequenceKeypoint.new(0.17, 0.46), NumberSequenceKeypoint.new(0.27, 0.57), NumberSequenceKeypoint.new(0.76, 0.35), NumberSequenceKeypoint.new(1.00, 0.00)}
+UIGradient_2.Parent = Home
+
+cyeroproject.Name = "cyero-project"
+cyeroproject.Parent = Home
+cyeroproject.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cyeroproject.BackgroundTransparency = 1.000
+cyeroproject.BorderSizePixel = 0
+cyeroproject.Position = UDim2.new(0.181866452, 0, 0.101605356, 0)
+cyeroproject.Size = UDim2.new(0, 176, 0, 91)
+cyeroproject.Font = Enum.Font.SciFi
+cyeroproject.Text = "Cyero-Project"
+cyeroproject.TextColor3 = Color3.fromRGB(0, 0, 0)
+cyeroproject.TextScaled = true
+cyeroproject.TextSize = 14.000
+cyeroproject.TextWrapped = true
+
+injectgui.Name = "injectgui"
+injectgui.Parent = Home
+injectgui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+injectgui.Position = UDim2.new(0.139016911, 0, 0.601092875, 0)
+injectgui.Size = UDim2.new(0, 200, 0, 50)
+injectgui.Font = Enum.Font.Oswald
+injectgui.Text = "Inject GUI for this supported game"
+injectgui.TextColor3 = Color3.fromRGB(255, 255, 255)
+injectgui.TextScaled = true
+injectgui.TextSize = 14.000
+injectgui.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0, 10)
+UICorner_3.Parent = injectgui
+
+Pages.Name = "Pages"
+Pages.Parent = Main
+Pages.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pages.BackgroundTransparency = 1.000
+Pages.Size = UDim2.new(0, 279, 0, 29)
+
+Home_2.Name = "Home"
+Home_2.Parent = Pages
+Home_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home_2.BackgroundTransparency = 0.800
+Home_2.Position = UDim2.new(0.279755533, 0, 0, 0)
+Home_2.Size = UDim2.new(0, 58, 0, 26)
+Home_2.Font = Enum.Font.SourceSans
+Home_2.Text = "Home"
+Home_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Home_2.TextScaled = true
+Home_2.TextSize = 14.000
+Home_2.TextWrapped = true
+
+Credits.Name = "Credits"
+Credits.Parent = Pages
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 0.800
+Credits.Position = UDim2.new(0.523297489, 0, 0, 0)
+Credits.Size = UDim2.new(0, 58, 0, 26)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+
+Universal.Name = "Universal"
+Universal.Parent = Pages
+Universal.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Universal.BackgroundTransparency = 0.750
+Universal.Position = UDim2.new(0.860561967, 0, 2.41379309, 0)
+Universal.Size = UDim2.new(0, 39, 0, 42)
+Universal.Font = Enum.Font.SourceSans
+Universal.Text = "Universal"
+Universal.TextColor3 = Color3.fromRGB(0, 0, 0)
+Universal.TextScaled = true
+Universal.TextSize = 23.000
+Universal.TextWrapped = true
+
+UICorner_4.Parent = Universal
+
+UniversalPage.Name = "UniversalPage"
+UniversalPage.Parent = Main
+UniversalPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UniversalPage.Position = UDim2.new(1.00099277, 0, -0.00440436602, 0)
+UniversalPage.Size = UDim2.new(0, 279, 0, 183)
+UniversalPage.Visible = false
+
+UICorner_5.CornerRadius = UDim.new(0.200000003, 10)
+UICorner_5.Parent = UniversalPage
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(163, 163, 163)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(163, 163, 163))}
+UIGradient_3.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.00), NumberSequenceKeypoint.new(0.17, 0.46), NumberSequenceKeypoint.new(0.27, 0.57), NumberSequenceKeypoint.new(0.76, 0.35), NumberSequenceKeypoint.new(1.00, 0.00)}
+UIGradient_3.Parent = UniversalPage
+
+-- Scripts:
+
+local function DXCO_fake_script() -- Main.Drag 
+	local script = Instance.new('LocalScript', Main)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(DXCO_fake_script)()
+local function AJFQ_fake_script() -- injectgui.SupportedOpener 
+	local script = Instance.new('LocalScript', injectgui)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local loader = {}
+	loader.games = {}
+	local ts = game:GetService("TweenService")
+	
+	
+	function loader:addGame(id, name, url)
+		loader.games[tostring(id)] = {name = name, loadstring = url}
+	end
+	
+	function loader:detectGame()
+		local detectedGame = self.games[tostring(game.PlaceId)]
+		if detectedGame then
+			game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = "Cyero-Project",
+				Text = "Supported Game Found!",
+				Duration = 3
+			})
+			return detectedGame
+		else
+			return
+		end
+	end
+		loader:addGame(662417684, "Lucky Block Battlegrounds", "luckyblockbattlegrounds")
+		loader:addGame(6284583030, "Pet Simulator X", "petsimulatorx")
+	
+	local detectedGame = loader:detectGame()
+	
+	if detectedGame then
+			game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.Visible = false
+		if not pcall(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/ShibaAKA/Cyero-ProjectScripts/main/".. detectedGame.loadstring))()
+			end) then
+	end
+	else
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "Cyero-Project",
+			Text = "Not a Supported Game!",
+			Duration = 3
+		})
+		end
+		end)
+end
+coroutine.wrap(AJFQ_fake_script)()
+local function CNVP_fake_script() -- Home_2.LocalScript 
+	local script = Instance.new('LocalScript', Home_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.Home.Visible = true
+		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.CreditsPage.Visible = false
+	end)
+end
+coroutine.wrap(CNVP_fake_script)()
+local function CCIWHNJ_fake_script() -- Credits.LocalScript 
+	local script = Instance.new('LocalScript', Credits)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.Home.Visible = false
+		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.CreditsPage.Visible = true
+	end)
+end
+coroutine.wrap(CCIWHNJ_fake_script)()
+local function RHFT_fake_script() -- Universal.LocalScript 
+	local script = Instance.new('LocalScript', Universal)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "Cyero-Project",
+			Text = "For now Cyero-Project does not have their own universal page. For now, it will boot up shibas gui.",
+			Duration = 3
+		})
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ShibaAKA/MyRobloxScripts/main/shibas%20gui", true))()
+	end)
+end
+coroutine.wrap(RHFT_fake_script)()
