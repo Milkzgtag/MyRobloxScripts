@@ -1,7 +1,7 @@
--- Cyero-Project v1.1
--- Games that work with Cyero:
--- Lucky Block Battlegrounds
--- Pet Simulator X
+-- Cyero-Project v1.2
+
+-- 2/9/2022 v1.2
+-- Added Loading Page, Added Supported Games Page, Added like 5 new supported games, idk some other stuff probs
 
 -- Instances:
 
@@ -19,14 +19,25 @@ local UIGradient_2 = Instance.new("UIGradient")
 local cyeroproject = Instance.new("TextLabel")
 local injectgui = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
+local warning = Instance.new("TextLabel")
 local Pages = Instance.new("Frame")
 local Home_2 = Instance.new("TextButton")
 local Credits = Instance.new("TextButton")
 local Universal = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
+local SupportedGames = Instance.new("TextButton")
 local UniversalPage = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
 local UIGradient_3 = Instance.new("UIGradient")
+local SupportedGames_2 = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local UIGradient_4 = Instance.new("UIGradient")
+local supportedgames = Instance.new("TextLabel")
+local allofthesupportedgames = Instance.new("TextLabel")
+local Load = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local UIGradient_5 = Instance.new("UIGradient")
+local TextLabel = Instance.new("TextLabel")
 
 --Properties:
 
@@ -41,6 +52,7 @@ Main.BackgroundTransparency = 1.000
 Main.BorderSizePixel = 2
 Main.Position = UDim2.new(0.363122135, 0, 0.318132341, 0)
 Main.Size = UDim2.new(0, 279, 0, 183)
+Main.Visible = false
 
 CreditsPage.Name = "CreditsPage"
 CreditsPage.Parent = Main
@@ -138,17 +150,32 @@ injectgui.TextWrapped = true
 UICorner_3.CornerRadius = UDim.new(0, 10)
 UICorner_3.Parent = injectgui
 
+warning.Name = "warning"
+warning.Parent = Home
+warning.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+warning.BackgroundTransparency = 1.000
+warning.BorderSizePixel = 0
+warning.Position = UDim2.new(0.138855696, 0, 0.1398568, 0)
+warning.Size = UDim2.new(0, 213, 0, 35)
+warning.Font = Enum.Font.SourceSansBold
+warning.Text = "WARNING: DO NOT EXECUTE CYERO-PROJECT MORE THAN ONCE!"
+warning.TextColor3 = Color3.fromRGB(255, 0, 0)
+warning.TextScaled = true
+warning.TextSize = 14.000
+warning.TextWrapped = true
+
 Pages.Name = "Pages"
 Pages.Parent = Main
 Pages.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Pages.BackgroundTransparency = 1.000
 Pages.Size = UDim2.new(0, 279, 0, 29)
+Pages.ZIndex = 2
 
 Home_2.Name = "Home"
 Home_2.Parent = Pages
 Home_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Home_2.BackgroundTransparency = 0.800
-Home_2.Position = UDim2.new(0.279755533, 0, 0, 0)
+Home_2.Position = UDim2.new(0.182981327, 0, 0, 0)
 Home_2.Size = UDim2.new(0, 58, 0, 26)
 Home_2.Font = Enum.Font.SourceSans
 Home_2.Text = "Home"
@@ -161,7 +188,7 @@ Credits.Name = "Credits"
 Credits.Parent = Pages
 Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Credits.BackgroundTransparency = 0.800
-Credits.Position = UDim2.new(0.523297489, 0, 0, 0)
+Credits.Position = UDim2.new(0.598566294, 0, 0, 0)
 Credits.Size = UDim2.new(0, 58, 0, 26)
 Credits.Font = Enum.Font.SourceSans
 Credits.Text = "Credits"
@@ -185,6 +212,19 @@ Universal.TextWrapped = true
 
 UICorner_4.Parent = Universal
 
+SupportedGames.Name = "SupportedGames"
+SupportedGames.Parent = Pages
+SupportedGames.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SupportedGames.BackgroundTransparency = 0.800
+SupportedGames.Position = UDim2.new(0.390866637, 0, 0, 0)
+SupportedGames.Size = UDim2.new(0, 58, 0, 26)
+SupportedGames.Font = Enum.Font.SourceSans
+SupportedGames.Text = "Supported Games"
+SupportedGames.TextColor3 = Color3.fromRGB(0, 0, 0)
+SupportedGames.TextScaled = true
+SupportedGames.TextSize = 14.000
+SupportedGames.TextWrapped = true
+
 UniversalPage.Name = "UniversalPage"
 UniversalPage.Parent = Main
 UniversalPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -199,9 +239,74 @@ UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fr
 UIGradient_3.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.00), NumberSequenceKeypoint.new(0.17, 0.46), NumberSequenceKeypoint.new(0.27, 0.57), NumberSequenceKeypoint.new(0.76, 0.35), NumberSequenceKeypoint.new(1.00, 0.00)}
 UIGradient_3.Parent = UniversalPage
 
+SupportedGames_2.Name = "SupportedGames"
+SupportedGames_2.Parent = Main
+SupportedGames_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SupportedGames_2.Position = UDim2.new(-0.00617568381, 0, 0.00106008351, 0)
+SupportedGames_2.Size = UDim2.new(0, 279, 0, 183)
+SupportedGames_2.Visible = false
+
+UICorner_6.CornerRadius = UDim.new(0.200000003, 10)
+UICorner_6.Parent = SupportedGames_2
+
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(163, 163, 163)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(163, 163, 163))}
+UIGradient_4.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.00), NumberSequenceKeypoint.new(0.17, 0.46), NumberSequenceKeypoint.new(0.27, 0.57), NumberSequenceKeypoint.new(0.76, 0.35), NumberSequenceKeypoint.new(1.00, 0.00)}
+UIGradient_4.Parent = SupportedGames_2
+
+supportedgames.Name = "supportedgames"
+supportedgames.Parent = SupportedGames_2
+supportedgames.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+supportedgames.BackgroundTransparency = 1.000
+supportedgames.Position = UDim2.new(0.0501792133, 0, 0.213114768, 0)
+supportedgames.Size = UDim2.new(0, 265, 0, 151)
+supportedgames.Font = Enum.Font.PatrickHand
+supportedgames.Text = "Funky Friday, Mortem Metallum, Combat Warriors, KAT!, Tower Of Hell, Lucky Block Battlegrounds, Pet Simulator X"
+supportedgames.TextColor3 = Color3.fromRGB(0, 0, 0)
+supportedgames.TextScaled = true
+supportedgames.TextSize = 14.000
+supportedgames.TextWrapped = true
+
+allofthesupportedgames.Name = "allofthesupportedgames"
+allofthesupportedgames.Parent = SupportedGames_2
+allofthesupportedgames.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+allofthesupportedgames.BackgroundTransparency = 1.000
+allofthesupportedgames.Position = UDim2.new(0.0752688199, 0, 0.103825137, 0)
+allofthesupportedgames.Size = UDim2.new(0, 250, 0, 39)
+allofthesupportedgames.Font = Enum.Font.PatrickHand
+allofthesupportedgames.Text = "All Of The Supported Games:"
+allofthesupportedgames.TextColor3 = Color3.fromRGB(0, 0, 0)
+allofthesupportedgames.TextScaled = true
+allofthesupportedgames.TextSize = 14.000
+allofthesupportedgames.TextWrapped = true
+
+Load.Name = "Load"
+Load.Parent = CyeroProject
+Load.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Load.Position = UDim2.new(0.4239766, 0, 0.428007901, 0)
+Load.Size = UDim2.new(0, 155, 0, 73)
+
+UICorner_7.CornerRadius = UDim.new(0.200000003, 10)
+UICorner_7.Parent = Load
+
+UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(163, 163, 163)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(163, 163, 163))}
+UIGradient_5.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.00), NumberSequenceKeypoint.new(0.17, 0.46), NumberSequenceKeypoint.new(0.27, 0.57), NumberSequenceKeypoint.new(0.76, 0.35), NumberSequenceKeypoint.new(1.00, 0.00)}
+UIGradient_5.Parent = Load
+
+TextLabel.Parent = Load
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0.246575341, 0)
+TextLabel.Size = UDim2.new(0, 155, 0, 36)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Loading Cyero..."
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
 -- Scripts:
 
-local function DXCO_fake_script() -- Main.Drag 
+local function RXTJUF_fake_script() -- Main.Drag 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService('UserInputService')
@@ -239,8 +344,8 @@ local function DXCO_fake_script() -- Main.Drag
 		end
 	end)
 end
-coroutine.wrap(DXCO_fake_script)()
-local function AJFQ_fake_script() -- injectgui.SupportedOpener 
+coroutine.wrap(RXTJUF_fake_script)()
+local function OHLLM_fake_script() -- injectgui.SupportedOpener 
 	local script = Instance.new('LocalScript', injectgui)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -268,6 +373,11 @@ local function AJFQ_fake_script() -- injectgui.SupportedOpener
 	end
 		loader:addGame(662417684, "Lucky Block Battlegrounds", "luckyblockbattlegrounds")
 		loader:addGame(6284583030, "Pet Simulator X", "petsimulatorx")
+		loader:addGame(621129760, "KAT!", "kat")
+		loader:addGame(1962086868, "Tower Of Hell", "towerofhell")
+		loader:addGame(4282985734,"Combat Warriors", "combatwarriors")
+		loader:addGame(4169490976, "Mortem Metallum", "mortemmetallum")
+		loader:addGame(6447798030, "Funky Friday", "funkyfriday")
 	
 	local detectedGame = loader:detectGame()
 	
@@ -286,26 +396,28 @@ local function AJFQ_fake_script() -- injectgui.SupportedOpener
 		end
 		end)
 end
-coroutine.wrap(AJFQ_fake_script)()
-local function CNVP_fake_script() -- Home_2.LocalScript 
+coroutine.wrap(OHLLM_fake_script)()
+local function YVNKO_fake_script() -- Home_2.LocalScript 
 	local script = Instance.new('LocalScript', Home_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.Home.Visible = true
 		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.CreditsPage.Visible = false
+		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.SupportedGames.Visible = false
 	end)
 end
-coroutine.wrap(CNVP_fake_script)()
-local function CCIWHNJ_fake_script() -- Credits.LocalScript 
+coroutine.wrap(YVNKO_fake_script)()
+local function RXSDGLN_fake_script() -- Credits.LocalScript 
 	local script = Instance.new('LocalScript', Credits)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.Home.Visible = false
 		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.CreditsPage.Visible = true
+		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.SupportedGames.Visible = false
 	end)
 end
-coroutine.wrap(CCIWHNJ_fake_script)()
-local function RHFT_fake_script() -- Universal.LocalScript 
+coroutine.wrap(RXSDGLN_fake_script)()
+local function ACWXGTL_fake_script() -- Universal.LocalScript 
 	local script = Instance.new('LocalScript', Universal)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -317,4 +429,23 @@ local function RHFT_fake_script() -- Universal.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ShibaAKA/MyRobloxScripts/main/shibas%20gui", true))()
 	end)
 end
-coroutine.wrap(RHFT_fake_script)()
+coroutine.wrap(ACWXGTL_fake_script)()
+local function NGRKI_fake_script() -- SupportedGames.LocalScript 
+	local script = Instance.new('LocalScript', SupportedGames)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.Home.Visible = false
+		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.CreditsPage.Visible = false
+		game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.SupportedGames.Visible = true
+	end)
+end
+coroutine.wrap(NGRKI_fake_script)()
+local function MGNIWGV_fake_script() -- Load.LocalScript 
+	local script = Instance.new('LocalScript', Load)
+
+	game:GetService("StarterGui")
+	wait(1.5)
+	game.Players.LocalPlayer.PlayerGui.CyeroProject.Main.Visible = true
+	game.Players.LocalPlayer.PlayerGui.CyeroProject.Load.Visible = false
+end
+coroutine.wrap(MGNIWGV_fake_script)()
