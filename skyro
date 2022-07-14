@@ -1,0 +1,206 @@
+--skyrooooooo
+
+-- Instances:
+
+local skyrologin = Instance.new("ScreenGui")
+local login = Instance.new("Frame")
+local logintext = Instance.new("TextLabel")
+local Username = Instance.new("TextBox")
+local Password = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local loginbutton = Instance.new("TextButton")
+local caps = Instance.new("TextLabel")
+
+--Properties:
+
+skyrologin.Name = "skyrologin"
+skyrologin.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+skyrologin.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+login.Name = "login"
+login.Parent = skyrologin
+login.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+login.Position = UDim2.new(0.305068225, 0, 0.310276687, 0)
+login.Size = UDim2.new(0, 399, 0, 192)
+
+logintext.Name = "logintext"
+logintext.Parent = login
+logintext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+logintext.BackgroundTransparency = 1.000
+logintext.Position = UDim2.new(0.185463667, 0, 0, 0)
+logintext.Size = UDim2.new(0, 250, 0, 70)
+logintext.Font = Enum.Font.PermanentMarker
+logintext.Text = "Login to Skyro"
+logintext.TextColor3 = Color3.fromRGB(0, 0, 0)
+logintext.TextScaled = true
+logintext.TextSize = 14.000
+logintext.TextWrapped = true
+
+Username.Name = "Username"
+Username.Parent = login
+Username.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Username.Position = UDim2.new(0.112781957, 0, 0.364583343, 0)
+Username.Size = UDim2.new(0, 309, 0, 34)
+Username.Font = Enum.Font.SourceSans
+Username.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Username.PlaceholderText = "Username"
+Username.Text = ""
+Username.TextColor3 = Color3.fromRGB(0, 0, 0)
+Username.TextScaled = true
+Username.TextSize = 14.000
+Username.TextWrapped = true
+
+Password.Name = "Password"
+Password.Parent = login
+Password.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Password.Position = UDim2.new(0.112781957, 0, 0.588541687, 0)
+Password.Size = UDim2.new(0, 309, 0, 34)
+Password.Font = Enum.Font.SourceSans
+Password.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Password.PlaceholderText = "Password"
+Password.Text = ""
+Password.TextColor3 = Color3.fromRGB(0, 0, 0)
+Password.TextScaled = true
+Password.TextSize = 14.000
+Password.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0.100000001, 0)
+UICorner.Parent = login
+
+loginbutton.Name = "loginbutton"
+loginbutton.Parent = login
+loginbutton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+loginbutton.Position = UDim2.new(0.246170968, 0, 0.812541187, 0)
+loginbutton.Size = UDim2.new(0, 200, 0, 27)
+loginbutton.Font = Enum.Font.PermanentMarker
+loginbutton.Text = "Login"
+loginbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+loginbutton.TextScaled = true
+loginbutton.TextSize = 14.000
+loginbutton.TextWrapped = true
+
+caps.Name = "caps"
+caps.Parent = login
+caps.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+caps.BackgroundTransparency = 1.000
+caps.Position = UDim2.new(0.558897257, 0, 0.213541672, 0)
+caps.Size = UDim2.new(0, 131, 0, 29)
+caps.Font = Enum.Font.Arial
+caps.Text = "cap sensitive"
+caps.TextColor3 = Color3.fromRGB(0, 0, 0)
+caps.TextScaled = true
+caps.TextSize = 14.000
+caps.TextWrapped = true
+
+-- Scripts:
+
+local function LVXCOFD_fake_script() -- login.colorchange 
+	local script = Instance.new('LocalScript', login)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.01)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(LVXCOFD_fake_script)()
+local function UXBY_fake_script() -- Username.colorchange 
+	local script = Instance.new('LocalScript', Username)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.01)do
+		script.Parent.PlaceholderColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(UXBY_fake_script)()
+local function VLARNUE_fake_script() -- Password.colorchange 
+	local script = Instance.new('LocalScript', Password)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.01)do
+		script.Parent.PlaceholderColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(VLARNUE_fake_script)()
+local function KIUYTC_fake_script() -- loginbutton.LocalScript 
+	local script = Instance.new('LocalScript', loginbutton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	local player = game.Players.LocalPlayer
+	local user = game.Players.LocalPlayer.PlayerGui.skyrologin.login.Username.Text
+	local pass = game.Players.LocalPlayer.PlayerGui.skyrologin.login.Password.Text
+	
+		if user == "shiba" and pass == "shiba is sussy" then
+			wait(0.4)
+			player.PlayerGui.skyrologin:Destroy()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ShibaGT/ScriptsToPowerOtherScripts/main/Loadstring%20Support'))()
+		end
+		
+		if user == "DogeyGt" and pass == "Dogeyballs" then
+			wait(0.4)
+			player.PlayerGui.skyrologin:Destroy()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ShibaGT/ScriptsToPowerOtherScripts/main/Loadstring%20Support'))()
+		end
+		
+		if user == "USER" and pass == "BASIC" then
+			wait(0.4)
+			player.PlayerGui.skyrologin:Destroy()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ShibaGT/ScriptsToPowerOtherScripts/main/Loadstring%20Support'))()
+		end
+		
+	end)
+end
+coroutine.wrap(KIUYTC_fake_script)()
+local function OFTDU_fake_script() -- login.Drag 
+	local script = Instance.new('LocalScript', login)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(OFTDU_fake_script)()
