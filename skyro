@@ -1,5 +1,4 @@
---skyrooooooo
-
+-- skyro?
 -- Instances:
 
 local skyrologin = Instance.new("ScreenGui")
@@ -45,7 +44,7 @@ Username.Font = Enum.Font.SourceSans
 Username.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
 Username.PlaceholderText = "Username"
 Username.Text = ""
-Username.TextColor3 = Color3.fromRGB(0, 0, 0)
+Username.TextColor3 = Color3.fromRGB(255, 255, 255)
 Username.TextScaled = true
 Username.TextSize = 14.000
 Username.TextWrapped = true
@@ -59,7 +58,7 @@ Password.Font = Enum.Font.SourceSans
 Password.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
 Password.PlaceholderText = "Password"
 Password.Text = ""
-Password.TextColor3 = Color3.fromRGB(0, 0, 0)
+Password.TextColor3 = Color3.fromRGB(255, 255, 255)
 Password.TextScaled = true
 Password.TextSize = 14.000
 Password.TextWrapped = true
@@ -94,7 +93,7 @@ caps.TextWrapped = true
 
 -- Scripts:
 
-local function LVXCOFD_fake_script() -- login.colorchange 
+local function IGUAW_fake_script() -- login.colorchange 
 	local script = Instance.new('LocalScript', login)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -107,8 +106,8 @@ local function LVXCOFD_fake_script() -- login.colorchange
 		counter = counter + 0.01
 	end
 end
-coroutine.wrap(LVXCOFD_fake_script)()
-local function UXBY_fake_script() -- Username.colorchange 
+coroutine.wrap(IGUAW_fake_script)()
+local function JOAJOZY_fake_script() -- Username.colorchange 
 	local script = Instance.new('LocalScript', Username)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -121,8 +120,8 @@ local function UXBY_fake_script() -- Username.colorchange
 		counter = counter + 0.01
 	end
 end
-coroutine.wrap(UXBY_fake_script)()
-local function VLARNUE_fake_script() -- Password.colorchange 
+coroutine.wrap(JOAJOZY_fake_script)()
+local function THUKXRE_fake_script() -- Password.colorchange 
 	local script = Instance.new('LocalScript', Password)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -135,8 +134,8 @@ local function VLARNUE_fake_script() -- Password.colorchange
 		counter = counter + 0.01
 	end
 end
-coroutine.wrap(VLARNUE_fake_script)()
-local function KIUYTC_fake_script() -- loginbutton.LocalScript 
+coroutine.wrap(THUKXRE_fake_script)()
+local function DAJZ_fake_script() -- loginbutton.LocalScript 
 	local script = Instance.new('LocalScript', loginbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -164,8 +163,8 @@ local function KIUYTC_fake_script() -- loginbutton.LocalScript
 		
 	end)
 end
-coroutine.wrap(KIUYTC_fake_script)()
-local function OFTDU_fake_script() -- login.Drag 
+coroutine.wrap(DAJZ_fake_script)()
+local function SVWCCZG_fake_script() -- login.Drag 
 	local script = Instance.new('LocalScript', login)
 
 	local UIS = game:GetService('UserInputService')
@@ -203,4 +202,4 @@ local function OFTDU_fake_script() -- login.Drag
 		end
 	end)
 end
-coroutine.wrap(OFTDU_fake_script)()
+coroutine.wrap(SVWCCZG_fake_script)()
