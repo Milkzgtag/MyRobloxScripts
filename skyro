@@ -1,4 +1,5 @@
--- skyro?
+--skyro
+
 -- Instances:
 
 local skyrologin = Instance.new("ScreenGui")
@@ -93,7 +94,7 @@ caps.TextWrapped = true
 
 -- Scripts:
 
-local function IGUAW_fake_script() -- login.colorchange 
+local function EVBASRJ_fake_script() -- login.colorchange 
 	local script = Instance.new('LocalScript', login)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -106,8 +107,8 @@ local function IGUAW_fake_script() -- login.colorchange
 		counter = counter + 0.01
 	end
 end
-coroutine.wrap(IGUAW_fake_script)()
-local function JOAJOZY_fake_script() -- Username.colorchange 
+coroutine.wrap(EVBASRJ_fake_script)()
+local function FZXBYUE_fake_script() -- Username.colorchange 
 	local script = Instance.new('LocalScript', Username)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -120,8 +121,8 @@ local function JOAJOZY_fake_script() -- Username.colorchange
 		counter = counter + 0.01
 	end
 end
-coroutine.wrap(JOAJOZY_fake_script)()
-local function THUKXRE_fake_script() -- Password.colorchange 
+coroutine.wrap(FZXBYUE_fake_script)()
+local function ZJXVCV_fake_script() -- Password.colorchange 
 	local script = Instance.new('LocalScript', Password)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -134,8 +135,8 @@ local function THUKXRE_fake_script() -- Password.colorchange
 		counter = counter + 0.01
 	end
 end
-coroutine.wrap(THUKXRE_fake_script)()
-local function DAJZ_fake_script() -- loginbutton.LocalScript 
+coroutine.wrap(ZJXVCV_fake_script)()
+local function XNWKO_fake_script() -- loginbutton.LocalScript 
 	local script = Instance.new('LocalScript', loginbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -144,27 +145,41 @@ local function DAJZ_fake_script() -- loginbutton.LocalScript
 	local pass = game.Players.LocalPlayer.PlayerGui.skyrologin.login.Password.Text
 	
 		if user == "shiba" and pass == "shiba is sussy" then
+			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Login Successful!"
 			wait(0.4)
 			player.PlayerGui.skyrologin:Destroy()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/ShibaGT/ScriptsToPowerOtherScripts/main/Loadstring%20Support'))()
+		else
+			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Invalid Login!"
+			wait(0.4)
+			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Login"
 		end
 		
 		if user == "DogeyGt" and pass == "Dogeyballs" then
+			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Login Successful!"
 			wait(0.4)
 			player.PlayerGui.skyrologin:Destroy()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/ShibaGT/ScriptsToPowerOtherScripts/main/Loadstring%20Support'))()
+		else
+			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Invalid Login!"
+			wait(0.4)
+			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Login"
 		end
 		
-		if user == "USER" and pass == "BASIC" then
+		if user == "WATER" and pass == "BOTTLE" then
+			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Login Successful!"
 			wait(0.4)
 			player.PlayerGui.skyrologin:Destroy()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/ShibaGT/ScriptsToPowerOtherScripts/main/Loadstring%20Support'))()
+		else
+			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Invalid Login!"
+			wait(0.4)
+			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Login"
 		end
-		
 	end)
 end
-coroutine.wrap(DAJZ_fake_script)()
-local function SVWCCZG_fake_script() -- login.Drag 
+coroutine.wrap(XNWKO_fake_script)()
+local function LBAAJ_fake_script() -- login.Drag 
 	local script = Instance.new('LocalScript', login)
 
 	local UIS = game:GetService('UserInputService')
@@ -202,4 +217,4 @@ local function SVWCCZG_fake_script() -- login.Drag
 		end
 	end)
 end
-coroutine.wrap(SVWCCZG_fake_script)()
+coroutine.wrap(LBAAJ_fake_script)()
