@@ -1,4 +1,4 @@
---skyro
+-- skyro
 
 -- Instances:
 
@@ -94,7 +94,7 @@ caps.TextWrapped = true
 
 -- Scripts:
 
-local function EVBASRJ_fake_script() -- login.colorchange 
+local function VJNGXLH_fake_script() -- login.colorchange 
 	local script = Instance.new('LocalScript', login)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -107,8 +107,8 @@ local function EVBASRJ_fake_script() -- login.colorchange
 		counter = counter + 0.01
 	end
 end
-coroutine.wrap(EVBASRJ_fake_script)()
-local function FZXBYUE_fake_script() -- Username.colorchange 
+coroutine.wrap(VJNGXLH_fake_script)()
+local function GHBUT_fake_script() -- Username.colorchange 
 	local script = Instance.new('LocalScript', Username)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -121,8 +121,8 @@ local function FZXBYUE_fake_script() -- Username.colorchange
 		counter = counter + 0.01
 	end
 end
-coroutine.wrap(FZXBYUE_fake_script)()
-local function ZJXVCV_fake_script() -- Password.colorchange 
+coroutine.wrap(GHBUT_fake_script)()
+local function VXMOX_fake_script() -- Password.colorchange 
 	local script = Instance.new('LocalScript', Password)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -135,42 +135,26 @@ local function ZJXVCV_fake_script() -- Password.colorchange
 		counter = counter + 0.01
 	end
 end
-coroutine.wrap(ZJXVCV_fake_script)()
-local function XNWKO_fake_script() -- loginbutton.LocalScript 
+coroutine.wrap(VXMOX_fake_script)()
+local function XIKUU_fake_script() -- loginbutton.LocalScript 
 	local script = Instance.new('LocalScript', loginbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
+	local logincorrect = nil
 	local player = game.Players.LocalPlayer
 	local user = game.Players.LocalPlayer.PlayerGui.skyrologin.login.Username.Text
 	local pass = game.Players.LocalPlayer.PlayerGui.skyrologin.login.Password.Text
 	
-		if user == "shiba" and pass == "shiba is sussy" then
-			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Login Successful!"
-			wait(0.4)
-			player.PlayerGui.skyrologin:Destroy()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/ShibaGT/ScriptsToPowerOtherScripts/main/Loadstring%20Support'))()
-		else
-			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Invalid Login!"
-			wait(0.4)
-			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Login"
-		end
-		
-		if user == "DogeyGt" and pass == "Dogeyballs" then
-			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Login Successful!"
-			wait(0.4)
-			player.PlayerGui.skyrologin:Destroy()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/ShibaGT/ScriptsToPowerOtherScripts/main/Loadstring%20Support'))()
-		else
-			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Invalid Login!"
-			wait(0.4)
-			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Login"
-		end
-		
 		if user == "WATER" and pass == "BOTTLE" then
-			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Login Successful!"
+			logincorrect = true
 			wait(0.4)
 			player.PlayerGui.skyrologin:Destroy()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/ShibaGT/ScriptsToPowerOtherScripts/main/Loadstring%20Support'))()
+		else
+			logincorrect = false
+		end
+		if (logincorrect == true) then
+			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Login Successful!"
 		else
 			game.Players.LocalPlayer.PlayerGui.skyrologin.login.loginbutton.Text = "Invalid Login!"
 			wait(0.4)
@@ -178,8 +162,8 @@ local function XNWKO_fake_script() -- loginbutton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XNWKO_fake_script)()
-local function LBAAJ_fake_script() -- login.Drag 
+coroutine.wrap(XIKUU_fake_script)()
+local function RAXFFK_fake_script() -- login.Drag 
 	local script = Instance.new('LocalScript', login)
 
 	local UIS = game:GetService('UserInputService')
@@ -217,4 +201,4 @@ local function LBAAJ_fake_script() -- login.Drag
 		end
 	end)
 end
-coroutine.wrap(LBAAJ_fake_script)()
+coroutine.wrap(RAXFFK_fake_script)()
